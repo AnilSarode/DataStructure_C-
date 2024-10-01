@@ -23,8 +23,8 @@ void preorderTraversal(struct Node * root){
     preorderTraversal(root->left);
     preorderTraversal(root->right);
     
-    #Recursion Flow: The flow of recursion is: 1 → 2 → 4 → NULL → NULL → 5 → NULL → NULL → 3 → 6 → NULL → NULL → 7 → NULL → NULL.
-
+    /*Recursion Flow: The flow of recursion is: 1 → 2 → 4 → NULL → NULL → 5 → NULL → NULL → 3 → 6 → NULL → NULL → 7 → NULL → NULL. */
+}
 
 // Inorder Traversal (Left, Root, Right)
 void inorderTraversal(Node* root) {
@@ -34,7 +34,16 @@ void inorderTraversal(Node* root) {
     inorderTraversal(root->right); // Traverse right subtree
 }
     
-    #The flow of recursion is: NULL → 4 → NULL → 2 → NULL → 5 → NULL → 1 → NULL → 6 → NULL → 3 → NULL → 7 → NULL.
+    /*The flow of recursion is: NULL → 4 → NULL → 2 → NULL → 5 → NULL → 1 → NULL → 6 → NULL → 3 → NULL → 7 → NULL.
+}*/
+
+
+void postorderTraversal(Node* root){
+    if (root ==NULL) return;
+    postorderTraversal(root->left);
+    postorderTraversal(root->right);
+    cout<<root->data<<" ";
+    
 }
 int main() {
     
@@ -47,7 +56,10 @@ int main() {
     root->right->right = new Node(7);
 
     preorderTraversal(root);
+    cout <<"\n";
+    inorderTraversal(root);
+    cout<< "\n";
+    postorderTraversal(root);
     
-
     return 0;
 }
