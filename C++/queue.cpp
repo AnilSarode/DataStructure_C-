@@ -7,6 +7,8 @@ class queue{
     int front;
     int back;
     
+    // This is the constructor 
+    
     public:
     queue(){
         arr = new int [n];
