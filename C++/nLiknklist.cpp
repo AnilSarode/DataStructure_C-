@@ -42,7 +42,7 @@ int main() {
             copy = head;
         } else {
             copy->link = temp;  // Link the new node
-            copy = copy->link;  // Move to the new node
+            copy = copy->link;  // Move to the new node i.e. copy still hold the address of the head or current node so move ahead. 
         }
     }
 
