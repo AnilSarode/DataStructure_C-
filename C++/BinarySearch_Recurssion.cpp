@@ -4,9 +4,9 @@
 using namespace std;
 
 
-int binarySerach(vector<int> arr ,int tar){
+int recBinarySerach(vector<int> arr ,int tar, int st, int end){
     
-    int st=0, end=arr.size()-1;
+    // int st=0, end=arr.size()-1;
     
     if(st<= end){
         
@@ -15,12 +15,14 @@ int binarySerach(vector<int> arr ,int tar){
         if (tar> arr[mid]){
             st =mid+1;
 
-            binarySerach(arr, tar)
+            return recBinarySerach(arr, tar, st, end);
             
         }
         else if (tar < arr[mid]){
             
             end = mid-1; 
+            return recBinarySerach(arr, tar, st, end);
+
         }
         else {
             return mid;
@@ -49,7 +51,7 @@ int main() {
 
     
     
-    cout<<binarySerach(arr1, tar1);
+    cout<< recBinarySerach(arr1, tar1, 0, n-1);
 
     return 0;
 }
