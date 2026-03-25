@@ -24,6 +24,7 @@ public:
 
 	Teacher(string name, string dept, string subject, double salary ){
 
+
 		this->name = name;
 		this->dept = dept;
 		this->subject = subject;
@@ -34,6 +35,7 @@ public:
 
 	Teacher(Teacher &orgObj){
 
+		// custom copy constructor  
 		this->name = orgObj.name;
 		this->dept = orgObj.dept;
 		this->subject = orgObj.subject;

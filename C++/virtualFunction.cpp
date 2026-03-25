@@ -23,7 +23,7 @@ int main() {
 
     // This will call Derived class's show function
     basePtr->show();  // Output: "Derived class show function"
-    
+    derivedObj.show();
     return 0;
 }
 

@@ -41,7 +41,7 @@ public:
 	void setSallary(double s){
 		salary = s;
 	}
-
+	//getter
 	double getSallary(){
 		return salary; 
 	}
